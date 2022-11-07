@@ -1,8 +1,5 @@
 {
-  "name": "react-modal",
-  "publishConfig": {
-    "FabienStervinou:registry": "https://npm.pkg.github.com"
-  },
+  "name": "@fster/react-modal",
   "version": "0.0.0",
   "description": "React modal component",
   "license": "MIT",
