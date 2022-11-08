@@ -15,8 +15,6 @@ jobs:
           node-version: 12
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - run: npm ci
-      - run: pwd
-      - run: ls
       - run: npm i
       - run: npm run rollup
       - run: npm publish --access public
