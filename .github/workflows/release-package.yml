@@ -15,8 +15,12 @@ jobs:
           node-version: 12
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - run: npm ci
+      - run: pwd
+      - run: ls
       - run: npm i
-      - run: npm run publish-patch
+      - run: npm run rollup
+      - run: npm version patch
+      - run: npm npm publish --access public
 
   publish-gpr:
     needs: build
