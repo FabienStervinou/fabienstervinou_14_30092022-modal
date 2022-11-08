@@ -18,9 +18,8 @@ const closeModal = (e: React.MouseEvent<HTMLButtonElement>) => {
 };
 
 export const Modal = (props: ModalProps) => {
-
   return (
-    <div className={"modal" + props.isVisible ? " isVisible" : ""} aria-modal="true" role="dialog" aria-label="Interactive modal" tabIndex={-1}>
+    <div className={`modal ${props.isVisible ? " isVisible" : ""}`} aria-modal="true" role="dialog" aria-label="Interactive modal" tabIndex={-1}>
       <div className="modalContainer">
         <div className="modalContent">
           <button className="modalContent-close" onClick={closeModal} tabIndex={1}>
