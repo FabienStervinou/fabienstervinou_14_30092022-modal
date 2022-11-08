@@ -19,7 +19,7 @@ jobs:
       - run: ls
       - run: npm i
       - run: npm run rollup
-      - run: npm npm publish --access public
+      - run: npm publish --access public
 
   publish-gpr:
     needs: build
