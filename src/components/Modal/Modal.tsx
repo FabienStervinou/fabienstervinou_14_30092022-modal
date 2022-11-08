@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Modal.scss";
 
 export interface ModalProps {
@@ -19,8 +19,10 @@ const closeModal = (e: React.MouseEvent<HTMLButtonElement>) => {
 };
 
 export const Modal = (props: ModalProps) => {
+  const isVisible = useState(props.isVisible)
+
   return (
-    <div className="modal" aria-modal="true" role="dialog" aria-label="Interactive modal" tabIndex={-1}>
+    <div className={"modal" + isVisible ? " isVisible" : ""} aria-modal="true" role="dialog" aria-label="Interactive modal" tabIndex={-1}>
       <div className="modalContainer">
       <div className="modalContent">
         <button className="modalContent-close" onClick={closeModal} tabIndex={1}>

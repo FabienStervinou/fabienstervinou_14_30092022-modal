@@ -8,7 +8,7 @@
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.04);
-  z-index: 1;
+  z-index: 10;
 
   &.isVisible {
     display: block;
@@ -19,7 +19,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: 20;
   }
 
   &Content{
