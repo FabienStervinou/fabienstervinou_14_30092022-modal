@@ -2,7 +2,7 @@ name: Node.js Package
 
 on:
   release:
-    types: [published]
+    types: [created]
 
 jobs:
   build:
@@ -14,7 +14,7 @@ jobs:
           node-version: 12
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - run: npm ci
-      - run: npm test
+      - run: npm run publish-patch
 
   publish-gpr:
     needs: build
