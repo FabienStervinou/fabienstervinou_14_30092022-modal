@@ -20,7 +20,7 @@
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "publish-patch": "npm version patch && npm publish --access public"
+    "publish-patch": "npm run rollup && npm version patch && npm publish --access public"
   },
   "browserslist": {
     "production": [
