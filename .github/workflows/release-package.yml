@@ -2,7 +2,7 @@ name: Node.js Package
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
   build:
@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 12
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - run: npm ci
       - run: npm test
 
