@@ -1,6 +1,6 @@
 {
   "name": "@fster/react-modal",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "React modal component",
   "license": "MIT",
   "author": "fster",
@@ -19,7 +19,8 @@
     "rollup": "rollup -c",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "publish-patch": "npm version patch && npm publish --access public"
   },
   "browserslist": {
     "production": [

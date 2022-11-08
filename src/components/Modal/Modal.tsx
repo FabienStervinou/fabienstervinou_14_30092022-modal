@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Modal.scss";
 
 export interface ModalProps {
   title: string;
   text: string;
+  isVisible: Boolean;
+  hide: () => void;
 }
 
 const closeModal = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -16,12 +18,12 @@ const closeModal = (e: React.MouseEvent<HTMLButtonElement>) => {
   }
 };
 
-const Modal = (props: ModalProps) => {
+export const Modal = (props: ModalProps) => {
   return (
-    <div className='modal'>
+    <div className="modal" aria-modal="true" role="dialog" aria-label="Interactive modal" tabIndex={-1}>
       <div className="modalContainer">
       <div className="modalContent">
-        <button className="modalContent-close" onClick={closeModal}>
+        <button className="modalContent-close" onClick={closeModal} tabIndex={1}>
           &#9587;
         </button>
         <div className="modalContent-title">
@@ -35,5 +37,3 @@ const Modal = (props: ModalProps) => {
     </div>
   )
 };
-
-export default Modal;
