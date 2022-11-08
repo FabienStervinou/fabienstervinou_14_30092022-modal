@@ -1,5 +1,6 @@
 .modal {
   position: fixed;
+  display: none;
   z-index: 1;
   left: 0;
   top: 0;
@@ -8,6 +9,10 @@
   overflow: auto;
   background-color: rgba(0,0,0,0.04);
   z-index: 1;
+
+  &.isVisible {
+    display: block;
+  }
 
   &Container {
     position: absolute;

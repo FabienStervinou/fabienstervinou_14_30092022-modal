@@ -14,7 +14,7 @@ const closeModal = (e: React.MouseEvent<HTMLButtonElement>) => {
   const modalTarget = target.closest('.modal') as HTMLElement | null;
 
   if (modalTarget) {
-    modalTarget.style.display = 'none'
+    modalTarget.classList.remove('isVisible')
   }
 };
 
