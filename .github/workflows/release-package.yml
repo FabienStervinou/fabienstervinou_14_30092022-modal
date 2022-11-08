@@ -15,6 +15,7 @@ jobs:
           node-version: 12
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - run: npm ci
+      - run: npm i
       - run: npm run publish-patch
 
   publish-gpr:
