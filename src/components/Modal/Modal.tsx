@@ -5,7 +5,6 @@ export interface ModalProps {
   title: string;
   text: string;
   isVisible: Boolean;
-  hide: () => void;
 }
 
 const closeModal = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -19,7 +18,7 @@ const closeModal = (e: React.MouseEvent<HTMLButtonElement>) => {
 };
 
 export const Modal = (props: ModalProps) => {
-  const isVisible = useState(props.isVisible)
+  const isVisible = useState(false)
 
   return (
     <div className={"modal" + isVisible ? " isVisible" : ""} aria-modal="true" role="dialog" aria-label="Interactive modal" tabIndex={-1}>
