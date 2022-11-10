@@ -58,7 +58,6 @@
     "@storybook/manager-webpack5": "^6.5.9",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.5.9",
-    "@types/jest": "^28.1.6",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.8",
     "babel-loader": "^8.2.3",
