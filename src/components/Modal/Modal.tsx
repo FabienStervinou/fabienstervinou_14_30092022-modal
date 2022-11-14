@@ -6,6 +6,7 @@ export interface ModalProps {
   title: string;
   text: string;
   isVisible: Boolean;
+  target: Element | DocumentFragment;
   hide: () => void;
 }
 
@@ -38,7 +39,7 @@ const Modal = (props: ModalProps) => {
             </div>
           </div>
         </div>,
-        document.body
+        props.target ? props.target : document.body
       )
     : null
   )
